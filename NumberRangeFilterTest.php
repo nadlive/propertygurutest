@@ -14,7 +14,6 @@
 //require_once 'PHPUnit.php';
 require_once 'PHPUnit/Autoload.php';
 require_once 'FizzBuzzFilter.php';
-require_once 'FizzBuzzBazzFilter.php';
 
 
 class NumberRangeFilterTest extends PHPUnit_Framework_TestCase {
@@ -51,38 +50,5 @@ class NumberRangeFilterTest extends PHPUnit_Framework_TestCase {
         $numberRangeFizBuzz = new FizzBuzzFilter();
         $this->assertFalse($numberRangeFizBuzz->showResult(100,1));
     }
-
     
-    public function testBuzzFizzBazzShowResult(){
-       $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-       $expected = " 4 Buzz Fizz Bazz 8 Fizz Buzz Bazz";
-      // $this->assertEquals($expected,$numberRangeFizBuzz->showResult(4,11));
-    }
-    
-    public function testBuzzFizzBazzShowResultWithNegativeInputs(){
-        $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-        $expected = " -1 0 1 2 Fizz 4 Buzz Fizz Bazz 8 Fizz Buzz Bazz Fizz 13 14 Fizz Buzz 16";
-        $this->assertEquals($expected,$numberRangeFizBuzz->showResult(-1,16));
-    }
-    
-    public function testBuzzFizzBassShowResultWithOneNullInputs(){
-        $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-        $this->assertFalse($numberRangeFizBuzz->showResult(null,16));
-    }
-    
-    public function testBuzzFizzBazzShowResultWithBothNullInputs(){
-        $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-        $this->assertFalse($numberRangeFizBuzz->showResult(null,null));
-    }
-    
-    public function testBuzzFizzBazzShowBothInputsAreSame(){
-        $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-        $expected = " 1";
-        $this->assertEquals($expected, $numberRangeFizBuzz->showResult(1,1));
-    }
-    
-    public function testBuzzFizzBazzShowResultStartGreaterThanEndValue(){
-        $numberRangeFizBuzz = new FizzBuzzFilter();
-        $this->assertFalse($numberRangeFizBuzz->showResult(100,1));
-    }
 }

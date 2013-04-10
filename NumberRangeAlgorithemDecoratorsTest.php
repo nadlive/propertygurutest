@@ -15,7 +15,6 @@
 require_once 'PHPUnit/Autoload.php';
 require_once './BuzzFilterAlgorithemDecorator.php';
 require_once './FizzFilterAlgorithemDecorator.php';
-require_once './BazzFilterAlgorithemDecorator.php';
 
 
 class NumberRangeAlgorithemDecoratorsTest extends PHPUnit_Framework_TestCase {
@@ -104,30 +103,4 @@ class NumberRangeAlgorithemDecoratorsTest extends PHPUnit_Framework_TestCase {
        $buzzFilterAlgorithem = new FizzFilterAlgorithemDecorator($baseEmpyAlgorithem, null);
        $this->assertEquals('', $buzzFilterAlgorithem->showResult());
     }
-    
-    
-    public function testBazzFilterAlgorithem1(){
-       $baseEmpyAlgorithem = new NumberRangeFilterOne();
-       $buzzFilterAlgorithem = new BazzFilterAlgorithemDecorator($baseEmpyAlgorithem, 7);
-       $this->assertEquals(' Bazz', $buzzFilterAlgorithem->showResult());
-    }
-    
-    public function testBazzFilterAlgorithem2(){
-       $baseEmpyAlgorithem = new NumberRangeFilterOne();
-       $buzzFilterAlgorithem = new BazzFilterAlgorithemDecorator($baseEmpyAlgorithem, 8);
-       $this->assertEquals('', $buzzFilterAlgorithem->showResult());
-    }
-    
-    public function testBazzFilterAlgorithem3(){
-       $baseEmpyAlgorithem = new NumberRangeFilterOne();
-       $buzzFilterAlgorithem = new BazzFilterAlgorithemDecorator($baseEmpyAlgorithem, 11);
-       $this->assertEquals(' Bazz', $buzzFilterAlgorithem->showResult());
-    }
-    
-    public function testBazzFilterAlgorithem4(){
-       $baseEmpyAlgorithem = new NumberRangeFilterOne();
-       $buzzFilterAlgorithem = new BazzFilterAlgorithemDecorator($baseEmpyAlgorithem, -7);
-       $this->assertEquals(' Bazz', $buzzFilterAlgorithem->showResult());
-    }
-
 }
