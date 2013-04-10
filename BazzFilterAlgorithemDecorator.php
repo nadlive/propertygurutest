@@ -36,8 +36,9 @@ class BazzFilterAlgorithemDecorator implements InterfaceNumberRangeFilter {
      * @return string
      */
     public function showResult() {
+        $returnValue = $this->algorithem->showResult();
+        
         if ($this->number != null) {
-            $returnValue = $this->algorithem->showResult();
             /**
              * if number range is negative then accordingly it should consider
              * the previous two values
