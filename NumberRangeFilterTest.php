@@ -27,7 +27,7 @@ class NumberRangeFilterTest extends PHPUnit_Framework_TestCase {
     
     public function testBuzzFizzShowResultWithNegativeInputs(){
         $numberRangeFizBuzz = new FizzBuzzFilter();
-        $expected = " -1 Fizz Buzz 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 Fizz Buzz 16";
+        $expected = " -1 0 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 Fizz Buzz 16";
         $this->assertEquals($expected,$numberRangeFizBuzz->showResult(-1,16));
     }
     
@@ -61,7 +61,7 @@ class NumberRangeFilterTest extends PHPUnit_Framework_TestCase {
     
     public function testBuzzFizzBazzShowResultWithNegativeInputs(){
         $numberRangeFizBuzz = new FizzBuzzBazzFilter();
-        $expected = " -1 Fizz Buzz 1 2 Fizz 4 Buzz Fizz Bazz 8 Fizz Buzz Bazz Fizz 13 14 Fizz Buzz 16";
+        $expected = " -1 0 1 2 Fizz 4 Buzz Fizz Bazz 8 Fizz Buzz Bazz Fizz 13 14 Fizz Buzz 16";
         $this->assertEquals($expected,$numberRangeFizBuzz->showResult(-1,16));
     }
     
